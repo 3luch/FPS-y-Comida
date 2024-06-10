@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionAreaScript : MonoBehaviour
 {
-
+    public Text Text;
 
     int puntaje = 0;
     private void OnTriggerEnter(Collider other)
@@ -22,6 +23,7 @@ public class InteractionAreaScript : MonoBehaviour
                 puntaje += mante.puntosHambre;
 
             }
+            Text.text = "puntos: " + puntaje;
         }
     }
 }
